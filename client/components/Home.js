@@ -1,5 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 // import picture from '../../public/ludovico.png';
 
 /**
@@ -19,7 +20,7 @@ export const Home = props => {
               Provide every person the opportunity to play the piano instantly
             </p>
             <div>
-              <a href="#" class="landing-btn">Get started</a>
+              <Link to="/guest" class="landing-btn">Get started</Link>
             </div>
           </div>
           <div class="right">

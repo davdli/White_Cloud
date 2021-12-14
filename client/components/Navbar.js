@@ -1,12 +1,12 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import {logout} from '../store'
+import React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { logout } from '../store';
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div class="nav-container">
     <div class="logo">
-      <h3>White Clouds</h3>
+      <h3>White Cloud</h3>
     </div>
 
     <div class="links">
