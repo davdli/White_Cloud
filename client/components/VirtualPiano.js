@@ -18,17 +18,30 @@ const VirtualPiano = () => {
     <div className="guest-container">
       <div className="piano-container">
         <div data-note="C" className="key white"></div>
-        <div data-note="Db" className="key black"></div>
+        <div className="key black"></div>
+        <div data-note="Db" className="key white"></div>
+        <div className="key black"></div>
         <div data-note="D" className="key white"></div>
-        <div data-note="Eb" className="key black"></div>
+        <div data-note="Eb" className="key white"></div>
+        <div className="key black"></div>
         <div data-note="E" className="key white"></div>
+        <div className="key black"></div>
         <div data-note="F" className="key white"></div>
-        <div data-note="Gb" className="key black"></div>
+        <div className="key black"></div>
+        <div data-note="Gb" className="key white"></div>
+
         <div data-note="G" className="key white"></div>
-        <div data-note="Ab" className="key black"></div>
+        <div className="key black"></div>
+        <div data-note="Ab" className="key white"></div>
+        <div className="key black"></div>
         <div data-note="A" className="key white"></div>
-        <div data-note="Bb" className="key black"></div>
+        <div data-note="Bb" className="key white"></div>
+        <div className="key black"></div>
         <div data-note="B" className="key white"></div>
+        <div className="key black"></div>
+        <div className="key white"></div>
+        <div className="key black"></div>
+        <div className="key white"></div>
       </div>
 
       <audio id="C" src="C.mp3"></audio>
