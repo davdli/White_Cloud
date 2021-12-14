@@ -13,14 +13,14 @@ a {
   text-decoration: none;
 }
 
-.big-wrapper {
+.app-container {
   /* padding: 1.7rem 0 2rem; */
   width: 100%;
   min-width: 100vh;
   overflow: hidden;
 }
 
-.container {
+.nav-container {
   height: 5rem;
   position: relative;
   background-color: white;
@@ -67,4 +67,60 @@ a {
 
 .btn:hover {
   background-color: #101820;
+}
+
+.landing-container {
+  padding: 0 3rem;
+  margin-top: 10rem;
+  align-items: center;
+  justify-content: content;
+}
+
+.title p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  letter-spacing: .05em;
+  font-weight: 300;
+  color: #2b313c;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: #787b7d;
+}
+
+.landing-btn {
+  margin-top: 1rem;
+  background-color: #2b313c;
+  color: #f9f9f9;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+  display: inline-block;
+  border-radius: 37px;
+  padding: 15px 22px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer-container {
+  height: 5rem;
+  position: relative;
+  background-color: #0a0e12;
+  width: 100%;
+  margin-top: 11.5rem;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container p {
+  color: #787b7d;
+  display: inline-block;
+  font-size: 1rem;
 }
