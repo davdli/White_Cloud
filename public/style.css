@@ -73,7 +73,8 @@ a {
   padding: 0 3rem;
   margin-top: 10rem;
   align-items: center;
-  justify-content: content;
+  justify-content: space-between;
+  display: flex;
 }
 
 .title p {
@@ -107,12 +108,26 @@ p {
   cursor: pointer;
 }
 
+.left {
+  margin-top: -5rem;
+}
+
+.right {
+  margin-top: -5rem;
+}
+
+.right img {
+  height: 24rem;
+  width: 32rem;
+  border-radius: 12px;
+}
+
 .footer-container {
   height: 5rem;
   position: relative;
   background-color: #0a0e12;
   width: 100%;
-  margin-top: 11.5rem;
+  margin-top: 10.1rem;
   padding: 0 3rem;
   display: flex;
   align-items: center;
@@ -137,14 +152,14 @@ p {
   display: flex;
 }
 
-.white-key {
+.white {
   width: 100px;
   height: 400px;
   background-color: white;
   border: 1px solid gray;
 }
 
-.black-key {
+.black {
   width: 60px;
   height: 240px;
   background-color: black;
