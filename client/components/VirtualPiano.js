@@ -1,38 +1,52 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const VirtualPiano = () => {
-  return (
-    <div class="guest-container">
-      <div class="piano-container">
-        <div data-note="C" class="white-key"></div>
-        <div data-note="Db" class="black-key"></div>
-        <div data-note="D" class="white-key"></div>
-        <div data-note="Eb" class="black-key"></div>
-        <div data-note="E" class="white-key"></div>
-        <div data-note="F" class="white-key"></div>
-        <div data-note="Gb" class="black-key"></div>
-        <div data-note="G" class="white-key"></div>
-        <div data-note="Ab" class="black-key"></div>
-        <div data-note="A" class="white-key"></div>
-        <div data-note="Bb" class="black-key"></div>
-        <div data-note="B" class="white-key"></div>
+class VirtualPiano extends Component {
+  componentDidMount() {
+    const keys = document.querySelectorAll('.key');
+
+    keys.forEach(key => {
+      key.addEventListener('click', () => playNote(key))
+    })
+
+    const playNote = (key) => {
+      const noteAudio = document.getElementById(key.dataset.note);
+      noteAudio.play()
+    }
+  }
+
+  render () {
+    return (
+      <div className="guest-container">
+        <div className="piano-container">
+          <div data-note="C" className="key white"></div>
+          <div data-note="Db" className="key black"></div>
+          <div data-note="D" className="key white"></div>
+          <div data-note="Eb" className="key black"></div>
+          <div data-note="E" className="key white"></div>
+          <div data-note="F" className="key white"></div>
+          <div data-note="Gb" className="key black"></div>
+          <div data-note="G" className="key white"></div>
+          <div data-note="Ab" className="key black"></div>
+          <div data-note="A" className="key white"></div>
+          <div data-note="Bb" className="key black"></div>
+          <div data-note="B" className="key white"></div>
+        </div>
+
+        <audio id="C" src="C.mp3"></audio>
+        <audio id="Db" src="Db.mp3"></audio>
+        <audio id="D" src="D.mp3"></audio>
+        <audio id="Eb" src="Eb.mp3"></audio>
+        <audio id="E" src="E.mp3"></audio>
+        <audio id="F" src="F.mp3"></audio>
+        <audio id="Gb" src="Gb.mp3"></audio>
+        <audio id="G" src="G.mp3"></audio>
+        <audio id="Ab" src="Ab.mp3"></audio>
+        <audio id="A" src="A.mp3"></audio>
+        <audio id="Bb" src="Bb.mp3"></audio>
+        <audio id="B" src="B.mp3"></audio>
       </div>
-
-      <audio id="C" src="../../notes/C.mp3"></audio>
-      <audio id="Db" src="../../notes/Db.mp3"></audio>
-      <audio id="D" src="../../notes/D.mp3"></audio>
-      <audio id="Eb" src="../../notes/Eb.mp3"></audio>
-      <audio id="E" src="../../notes/E.mp3"></audio>
-      <audio id="F" src="../../notes/F.mp3"></audio>
-      <audio id="Gb" src="../../notes/Gb.mp3"></audio>
-      <audio id="G" src="../../notes/G.mp3"></audio>
-      <audio id="Ab" src="../../notes/Ab.mp3"></audio>
-      <audio id="A" src="../../notes/A.mp3"></audio>
-      <audio id="Bb" src="../../notes/Bb.mp3"></audio>
-      <audio id="B" src="../../notes/B.mp3"></audio>
-    </div>
-
-  )
+    )
+  }
 }
 
 export default VirtualPiano;
