@@ -159,6 +159,10 @@ p {
   border: 1px solid gray;
 }
 
+.white.active {
+  background-color: #a2a8d3;
+}
+
 .black {
   width: 48px;
   height: 192px;
