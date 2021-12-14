@@ -35,31 +35,58 @@ const VirtualPiano = () => {
   return (
     <div className="guest-container">
       <div className="piano-container">
-        <div data-note="C" className="white key"></div>
+        <div data-note="C" className="white key">
+          <p>C</p>
+        </div>
         <div className="black key"></div>
-        <div data-note="Db" className="white key"></div>
+        <div data-note="Db" className="white key">
+          <p>C#</p>
+        </div>
         <div className="black key"></div>
-        <div data-note="D" className="white key"></div>
-        <div data-note="Eb" className="white key"></div>
+        <div data-note="D" className="white key">
+          <p>D</p>
+        </div>
+        <div data-note="Eb" className="white key">
+          <p>D#</p>
+        </div>
         <div className="black key"></div>
-        <div data-note="E" className="white key"></div>
+        <div data-note="E" className="white key">
+          <p>E</p>
+        </div>
         <div className="black key"></div>
-        <div data-note="F" className="white key"></div>
+        <div data-note="F" className="white key">
+          <p>F</p>
+        </div>
         <div className="black key"></div>
-        <div data-note="Gb" className="white key"></div>
-
-        <div data-note="G" className="white key"></div>
+        <div data-note="Gb" className="white key">
+          <p>F#</p>
+        </div>
+        <div data-note="G" className="white key">
+          <p>G</p>
+        </div>
         <div className="black key"></div>
-        <div data-note="Ab" className="white key"></div>
+        <div data-note="Ab" className="white key">
+          <p>G#</p>
+        </div>
         <div className="black key"></div>
-        <div data-note="A" className="white key"></div>
-        <div data-note="Bb" className="white key"></div>
+        <div data-note="A" className="white key">
+          <p>A</p>
+        </div>
+        <div data-note="Bb" className="white key">
+          <p>A#</p>
+        </div>
         <div className="black key"></div>
-        <div data-note="B" className="white key"></div>
+        <div data-note="B" className="white key">
+          <p>B</p>
+        </div>
         <div className="black key"></div>
-        <div className="white key"></div>
+        <div className="white key">
+          <p>C</p>
+        </div>
         <div className="black key"></div>
-        <div className="white key"></div>
+        <div className="white key">
+          <p>C#</p>
+        </div>
       </div>
 
       <audio id="C" src="C.mp3"></audio>
