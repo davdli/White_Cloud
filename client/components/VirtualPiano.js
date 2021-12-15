@@ -34,6 +34,7 @@ const VirtualPiano = () => {
   }, [])
   return (
     <div className="guest-container">
+      <div className="piano-top"></div>
       <div className="piano-container">
         <div data-note="C" className="white key">
           <p>C</p>
