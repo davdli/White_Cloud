@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect } from "react";
+import * as Tone from 'tone'
 
 const VirtualPiano = () => {
 
@@ -22,12 +23,15 @@ const VirtualPiano = () => {
     piano.insertAdjacentHTML('beforeend', html)
 
     const notes = document.querySelectorAll('.whiteNote, .blackNote')
-    const keys = ['tab', '1', 'q', '2', 'w', 'e', '4', 'r', '5', 't', '6', 'y', 'u', '8', 'i', '9', 'o', 'p', '-', '[', '=', ']', 'delete', '|']
+    const keys = ['Tab', '1', 'q', '2', 'w', 'e', '4', 'r', '5', 't', '6', 'y', 'u', '8', 'i', '9', 'o', 'p', '-', '[', '=', ']', 'Backspace', '\\']
+    const synth = new Tone.PolySynth(Tone.Synth).toDestination();
 
     document.addEventListener('keydown', (event) => {
+      event.preventDefault();
       keys.forEach((key, index) => {
         if (event.key === key) {
           notes[index].style.background = (notes[index].classList.contains('whiteNote') ? '#ccc' : 'black')
+          synth.triggerAttackRelease(notes[index].dataset.code, '16n')
         }
       })
     })
