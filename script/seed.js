@@ -1,28 +1,59 @@
 'use strict'
 
-const {db, models: {User} } = require('../server/db')
+const {db, models: {User, Song} } = require('../server/db');
+
+const usersData = [
+  {
+    username: 'davdli',
+    password: 'FullstackAcademy1'
+  },
+  {
+    username: 'jasonnnz',
+    password: 'FlatironSchool1'
+  },
+]
+
+const songsData = [
+  {
+    name: 'Canon in D',
+    artist: 'Johann Pachelbel',
+    cover: 'https://m.media-amazon.com/images/I/41BXPQHW2DL.jpg',
+    sheet: 'https://i.pinimg.com/736x/45/8f/ff/458fff2cdd8768e26e80519c2d276a28--easy-keys-piano-sheet.jpg'
+  },
+  {
+    name: 'Jingle Bells',
+    artist: 'James Pierpont',
+    cover: 'https://images-na.ssl-images-amazon.com/images/I/91JN33kRNDL.jpg',
+    sheet: 'https://i.pinimg.com/originals/4f/7b/81/4f7b8136b573c817b309c1730428802c.gif'
+  },
+]
 
 /**
  * seed - this function clears the database, updates tables to
  *      match the models, and populates the database.
  */
 async function seed() {
-  await db.sync({ force: true }) // clears db and matches models to tables
-  console.log('db synced!')
+  await db.sync({ force: true }); // clears db and matches models to tables
+  console.log('db synced!');
 
   // Creating Users
-  const users = await Promise.all([
-    User.create({ username: 'cody', password: '123' }),
-    User.create({ username: 'murphy', password: '123' }),
-  ])
+  const users = await Promise.all(
+    usersData.map(user => {
+      return User.create(user);
+    })
+  );
+
+  const songs = await Promise.all(
+    songsData.map(song => {
+      return Song.create(song)
+    })
+  );
 
   console.log(`seeded ${users.length} users`)
   console.log(`seeded successfully`)
   return {
-    users: {
-      cody: users[0],
-      murphy: users[1]
-    }
+    users,
+    songs
   }
 }
 
