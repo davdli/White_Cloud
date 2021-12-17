@@ -3,7 +3,6 @@
 const db = require('./db');
 
 const User = require('./models/User');
-
 const Song = require('./models/Song');
 
 //associations could go here!
