@@ -22,4 +22,6 @@ const Song = db.define("song", {
   sheet: {
     type: Sequelize.TEXT,
   }
-})
+});
+
+module.exports = Song;
