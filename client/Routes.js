@@ -4,6 +4,7 @@ import {withRouter, Route, Switch, Redirect} from 'react-router-dom'
 import { Login, Signup } from './components/AuthForm';
 import Home from './components/Home';
 import VirtualPiano from './components/VirtualPiano';
+import AllSongs from './components/AllSongs';
 import {me} from './store'
 
 /**
@@ -23,6 +24,7 @@ class Routes extends Component {
           <Switch>
             <Route exact path="/home" component={Home} />
             <Route exact path="/guest" component={VirtualPiano} />
+            <Route exact path="/songs" component={AllSongs} />
             <Redirect to="/home" />
           </Switch>
         ) : (
@@ -31,6 +33,7 @@ class Routes extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/guest" component={VirtualPiano} />
+            <Route exact path="/songs" component={AllSongs} />
           </Switch>
         )}
       </div>

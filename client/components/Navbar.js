@@ -14,13 +14,13 @@ const Navbar = ({handleClick, isLoggedIn}) => (
     <div className="links">
       {isLoggedIn ? (
         <ul>
-        <Link to="/" className="link">Music</Link>
+        <Link to="/songs" className="link">Songs</Link>
         <Link to="/" className="link">Home</Link>
         <Link to="/" className="btn" onClick={handleClick}>LOG OUT</Link>
       </ul>
       ) : (
         <ul>
-        <Link to="/" className="link">Music</Link>
+        <Link to="/songs" className="link">Songs</Link>
         <Link to="/" className="link">Home</Link>
         <Link to="/login" className="link">Log in</Link>
         <Link to="/login" className="btn">SIGN UP</Link>
