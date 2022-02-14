@@ -1,6 +1,5 @@
 # White Cloud
-Platform that will provide users the opportunity to discover music and learn and play the piano instantly.
-(Work in Progress)
+White Cloud will be a virtual platform that lets you explore piano music and experiences with your computer keyboard.
 
 ## Preview
 <img width='75%' src="public/WhiteCloudDemo.gif">
