@@ -3,6 +3,7 @@ import { fetchSongs } from '../redux/allSongs';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const AllSongs = (props) => {
 
@@ -23,9 +24,15 @@ const AllSongs = (props) => {
         <div>
           {songs.map((song) => (
             <div key={song.id}>
-              <img src={song.cover} />
-              <p>{song.name}</p>
-              <p>{song.artist}</p>
+              <Link to={`/songs/${song.id}`}>
+                <img src={song.cover} />
+                <p>{song.name}</p>
+                <p>{song.artist}</p>
+                <img
+                  id='songSheet'
+                  src={song.sheet}
+                />
+              </Link>
             </div>
           ))}
         </div>
