@@ -5,6 +5,7 @@ import { Login, Signup } from './components/AuthForm';
 import Home from './components/Home';
 import VirtualPiano from './components/VirtualPiano';
 import AllSongs from './components/AllSongs';
+import SingleSong from './components/SingleSong';
 import {me} from './store'
 
 /**
@@ -25,15 +26,17 @@ class Routes extends Component {
             <Route exact path="/home" component={Home} />
             <Route exact path="/guest" component={VirtualPiano} />
             <Route exact path="/songs" component={AllSongs} />
+            <Route exact path='/songs/:id' component={SingleSong} />
             <Redirect to="/home" />
           </Switch>
         ) : (
           <Switch>
-            <Route exact path='/' exact component={ Home } />
+            <Route exact path='/' component={ Home } />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/guest" component={VirtualPiano} />
             <Route exact path="/songs" component={AllSongs} />
+            <Route exact path='/songs/:id' component={SingleSong} />
           </Switch>
         )}
       </div>
