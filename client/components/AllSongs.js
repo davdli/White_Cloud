@@ -26,6 +26,10 @@ const AllSongs = (props) => {
               <img src={song.cover} />
               <p>{song.name}</p>
               <p>{song.artist}</p>
+              <img
+                id='songSheet'
+                src={song.sheet}
+              />
             </div>
           ))}
         </div>
