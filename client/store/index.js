@@ -3,11 +3,13 @@ import {createLogger} from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import auth from './auth';
-import songsReducer from '../redux/allSongs';
+import allSongsReducer from '../redux/allSongs';
+import singleSongReducer from '../redux/singleSong';
 
 const reducer = combineReducers({
   auth,
-  allSongs: songsReducer
+  allSongs: allSongsReducer,
+  singleSong: singleSongReducer
  })
 
 const middleware = composeWithDevTools(
