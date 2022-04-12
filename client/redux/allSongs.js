@@ -20,7 +20,7 @@ export const fetchSongs = () => {
   }
 };
 
-export default function songsReducer(state = [], action) {
+export default function allSongsReducer(state = [], action) {
   switch (action.type) {
     case FETCH_SONGS:
       return action.songs

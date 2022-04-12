@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const FETCH_SONG = 'FETCH SONG';
+const FETCH_SONG = 'FETCH_SONG';
 
 export const _fetchSong = (song) => {
   return {
@@ -9,7 +9,7 @@ export const _fetchSong = (song) => {
   }
 };
 
-export const fethSong = (id) => {
+export const fetchSong = (id) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(`/api/songs/${id}`)
@@ -20,7 +20,7 @@ export const fethSong = (id) => {
   }
 }
 
-export default function singleSongReducer(state = {}, action) {
+export default function singleSongReducer(state = [], action) {
   switch (action.type) {
     case FETCH_SONG:
       return action.song
