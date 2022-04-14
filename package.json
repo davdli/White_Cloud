@@ -29,6 +29,7 @@
     "morgan": "^1.9.1",
     "pg": "^8.5.1",
     "sequelize": "^6.11.0",
+    "styled-components": "^5.3.5",
     "tone": "^14.7.77"
   },
   "devDependencies": {
