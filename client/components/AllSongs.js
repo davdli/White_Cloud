@@ -20,8 +20,8 @@ const AllSongs = (props) => {
       <TitleText>
         <h1>Discover music. Take a look at our library of piano sheets.</h1>
       </TitleText>
-      <div>
-        <div id='all-songs'>
+      <Songs>
+        <SongGrid>
           {songs.map((song) => (
             <SongInfo key={song.id}>
               <Link to={`/songs/${song.id}`}>
@@ -31,8 +31,8 @@ const AllSongs = (props) => {
               </Link>
             </SongInfo>
           ))}
-        </div>
-      </div>
+        </SongGrid>
+      </Songs>
     </Wrap>
   )
 }
@@ -58,12 +58,23 @@ const TitleText = styled.div`
 
 const SongInfo = styled.div`
   img {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
+    border-radius: 18px;
   }
   p {
     color: #1D1D1F;
-    font: 28px;
-    font-weight: 600;
+    font: 17px;
+    font-weight: 400;
+    margin: 0px;
   }
+`
+
+const Songs = styled.div`
+`
+
+const SongGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 `
