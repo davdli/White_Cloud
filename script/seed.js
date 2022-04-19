@@ -57,13 +57,13 @@ const songsData = [
     sheet: 'https://www.pianosongdownload.com/mary_had_a_little_lamb-piano.jpg'
   },
   {
-    name: 'London Bridge is Falling Down',
+    name: 'London Bridge',
     artist: 'The Wiggles',
     cover: 'https://latouchemusicale.com/wp-content/uploads/2021/04/london-bridge-piano-letters.jpeg',
     sheet: 'https://i.pinimg.com/originals/4f/7b/81/4f7b8136b573c817b309c1730428802c.gif'
   },
   {
-    name: 'The Lord of the Rings Theme',
+    name: 'Lord of the Rings Theme',
     artist: 'Howard Shore',
     cover: 'https://latouchemusicale.com/wp-content/uploads/2021/04/The-Lord-Of-The-Rings-piano-letters.jpeg',
     sheet: 'https://imgv2-1-f.scribdassets.com/img/document/288338055/original/501cb1ee15/1649253465?v=1'
