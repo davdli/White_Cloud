@@ -23,13 +23,15 @@ const AllSongs = (props) => {
       <Songs>
         <SongGrid>
           {songs.map((song) => (
-            <SongInfo key={song.id}>
-              <Link to={`/songs/${song.id}`}>
-                <img src={song.cover} />
-                <p>{song.name}</p>
-                <p>{song.artist}</p>
-              </Link>
-            </SongInfo>
+            <SongContainer>
+              <SongInfo key={song.id}>
+                <Link to={`/songs/${song.id}`}>
+                  <img src={song.cover} />
+                  <p>{song.name}</p>
+                  <p>{song.artist}</p>
+                </Link>
+              </SongInfo>
+            </SongContainer>
           ))}
         </SongGrid>
       </Songs>
@@ -56,15 +58,33 @@ const TitleText = styled.div`
   }
 `
 
+const SongContainer = styled.div`
+  width: 300px;
+  height: 400px;
+  background: #FFFFFF;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 18px;
+  box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+  transition: all .3s cubic-bezier(0,0,.5,1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const SongInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
     width: 200px;
     height: 200px;
     border-radius: 18px;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
   }
   p {
     color: #1D1D1F;
-    font: 17px;
+    font-size: 17px;
     font-weight: 400;
     margin: 0px;
   }
@@ -76,5 +96,5 @@ const Songs = styled.div`
 const SongGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 `
