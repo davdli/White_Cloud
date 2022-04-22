@@ -23,7 +23,7 @@ const AllSongs = (props) => {
       <Songs>
         <SongGrid>
           {songs.map((song) => (
-            <SongContainer>
+            <SongContainer className='song-container'>
               <SongInfo key={song.id}>
                 <Link to={`/songs/${song.id}`}>
                   <img src={song.cover} />
@@ -57,6 +57,11 @@ const TitleText = styled.div`
     font-weight: 600;
   }
 `
+const SongGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`
 
 const SongContainer = styled.div`
   width: 300px;
@@ -66,10 +71,15 @@ const SongContainer = styled.div`
   margin: 30px;
   border-radius: 18px;
   box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
-  transition: all .3s cubic-bezier(0,0,.5,1);
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: transform 250ms;
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 16%);
+  }
 `
 
 const SongInfo = styled.div`
@@ -93,8 +103,3 @@ const SongInfo = styled.div`
 const Songs = styled.div`
 `
 
-const SongGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`
